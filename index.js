@@ -8,6 +8,10 @@ server.get('/api', (req, res) => {
     res.json({message: `${process.env.COHORT} rocks` })
 })
 
+server.use((req, res) => {
+    res.json({message: 'hello'})
+})
+
 server.listen(PORT, () => {
     console.log(`listening on ${PORT}`)
 })
